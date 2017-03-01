@@ -1,0 +1,25 @@
+<h1>App to test OpenVidu WebComponent</h1>
+
+<hr />
+
+<!-- FORM -->
+<div class="form-session" *ngIf="!wsUrl">
+	<h1>Join a video session</h1>
+	<form (submit)="sendForm()" accept-charset="UTF-8">
+		<p>
+			<label>Participant:</label>
+			<input type="text" name="participantId" [(ngModel)]="participantId" required>
+		</p>
+		<p>
+			<label>Session:</label>
+			<input type="text" name="sessionId" [(ngModel)]="sessionId" required>
+		</p>
+		<p>
+			<input type="submit" name="submit" value="Join!">
+		</p>
+	</form>
+</div>
+
+<openvidu [wsUrl]="wsUrl" [sessionId]="sessionId" [participantId]="participantId" *ngIf="wsUrl">
+	Loading openvidu...
+</openvidu>

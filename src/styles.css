@@ -1,0 +1,13 @@
+@import '~@angular/material/core/theming/prebuilt/indigo-pink.css';
+
+html, body {
+	margin: 0px;
+	height: 100%;
+}
+
+app-root {
+	display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
