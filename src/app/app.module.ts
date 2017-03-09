@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 
-import { MaterialModule, OpenViduComponent, StreamComponent } from '/home/alex/Documents/Universidad/Cuarto/TFG/OpenVidu/openvidu-webcomponent/src/';
+import { MaterialModule, OpenViduComponent, StreamComponent } from 'angular-openvidu';
 
 @NgModule({
 	declarations: [

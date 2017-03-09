@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { OpenViduComponent } from '/home/alex/Documents/Universidad/Cuarto/TFG/OpenVidu/openvidu-webcomponent/src/';
+import { OpenViduComponent } from 'angular-openvidu';
 
 @Component({
 	selector: 'app-root',
