@@ -3,11 +3,13 @@
 ## Install
 
 1. Install `@angular/cli`:
+
 ```bash
 sudo npm install -g @angular/cli@latest
 ```
 
 2. Start docker:
+
 ```bash
 sudo docker run -p 8443:8443 --rm -e KMS_STUN_IP=193.147.51.12 -e KMS_STUN_PORT=3478 openvidu/openvidu-server-kms
 ```
