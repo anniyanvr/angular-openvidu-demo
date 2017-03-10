@@ -1,6 +1,6 @@
 # Angular Openvidu Demo
 [![Dependency Status](https://david-dm.org/alxhotel/angular-openvidu-demo.svg)](https://david-dm.org/alxhotel/angular-openvidu-demo)
-![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/alxhotel/angular-openvidu-demo/master/LICENSE)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/alxhotel/angular-openvidu-demo/master/LICENSE)
 
 ## Installation
 
