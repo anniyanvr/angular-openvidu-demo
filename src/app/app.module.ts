@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 
 import { MaterialModule, OpenViduComponent, StreamComponent } from 'angular-openvidu';
 
+import 'hammerjs';
+
 @NgModule({
 	declarations: [
 		AppComponent,
