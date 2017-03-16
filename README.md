@@ -1,6 +1,6 @@
 # Angular Openvidu Demo
 [![Dependency Status](https://david-dm.org/alxhotel/angular-openvidu-demo.svg)](https://david-dm.org/alxhotel/angular-openvidu-demo)
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/alxhotel/angular-openvidu-demo/master/LICENSE)
+[![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://raw.githubusercontent.com/alxhotel/angular-openvidu-demo/master/LICENSE)
 
 <p align="center"><img src="https://github.com/alxhotel/angular-openvidu-demo/blob/master/screenshots/form.png?raw=true"/></p>
 
@@ -29,3 +29,7 @@
 Open your browser at: [http://localhost:4200](http://localhost:4200).
 
 The app will automatically reload if you change any of the source files.
+
+## License
+
+Apache Software License 2.0 ©
