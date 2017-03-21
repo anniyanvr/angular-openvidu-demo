@@ -2,7 +2,9 @@
 [![Dependency Status](https://david-dm.org/alxhotel/angular-openvidu-demo.svg)](https://david-dm.org/alxhotel/angular-openvidu-demo)
 [![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://raw.githubusercontent.com/alxhotel/angular-openvidu-demo/master/LICENSE)
 
-<p align="center"><img src="https://github.com/alxhotel/angular-openvidu-demo/blob/master/screenshots/form.png?raw=true"/></p>
+This a demo app that implements `angular-openvidu`, using ALL the features included in the component.
+
+<p align="center"><img src="https://github.com/alxhotel/angular-openvidu-demo/blob/master/screenshots/screenshot_main.png?raw=true"/></p>
 
 ## Installation
 
