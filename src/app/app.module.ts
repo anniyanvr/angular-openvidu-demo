@@ -3,26 +3,31 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+// Animations
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from '@angular/material';
+
+// My component
 import { AppComponent } from './app.component';
 
-import { MaterialModule, OpenViduComponent, StreamComponent } from 'angular-openvidu';
-
+// OpenVidu dependencies
+import { OpenViduModule } from 'angular-openvidu';
 import 'hammerjs';
 
 @NgModule({
-	declarations: [
-		AppComponent,
-		OpenViduComponent,
-		StreamComponent
-	],
 	imports: [
 		BrowserModule,
 		FormsModule,
 		HttpModule,
-		MaterialModule.forRoot()
+		BrowserAnimationsModule,
+		MaterialModule,
+		OpenViduModule
 	],
-	providers: [],
-	bootstrap: [AppComponent]
+	declarations: [
+		AppComponent
+	],
+	bootstrap: [ AppComponent ],
+	providers: []
 })
 export class AppModule {
 	
