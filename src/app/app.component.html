@@ -36,7 +36,7 @@
 			</div>
 
 			<!-- AngularOpenVidu Component -->
-			<openvidu-hangouts *ngIf="showOpenvidu"
+			<openvidu *ngIf="showOpenvidu"
 				[wsUrl]="wsUrl" [sessionId]="sessionId" [participantId]="participantId"
 				(onRoomConnected)="onRoomConnected()"
 				(onParticipantJoined)="onParticipantJoined($event)"
@@ -45,7 +45,7 @@
 				(onLeaveRoom)="onLeaveRoom()"
 				(onNewMessage)="onNewMessage($event)">
 				Loading openvidu...
-			</openvidu-hangouts>
+			</openvidu>
 		</md-card-content>
 	</md-card>
 </div>
