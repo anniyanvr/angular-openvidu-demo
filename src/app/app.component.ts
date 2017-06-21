@@ -3,37 +3,45 @@ import { Component } from '@angular/core';
 import { MdSnackBar } from '@angular/material';
 
 @Component({
-	selector: 'app-root, lala',
+	selector: 'app-root',
+	styleUrls: ['./app.component.scss'],
 	templateUrl: './app.component.html',
-	styleUrls: ['./app.component.css']
 })
 export class AppComponent {
 
 	// Join form
-	private sessionId: string;
-	private participantId: string;
-	
-	private wsUrl: string;
-	private showOpenvidu: boolean = false;
-	private sessionClosed: boolean = false;
-	
+	sessionId: string;
+	participantId: string;
+	wsUrl: string;
+
+	toolbarOptions: Object[] = [{
+		title: 'My custom label',
+		icon: 'pets',
+		onClick: () => {
+			alert('You just clicked the custom pets button');
+		}
+	}];
+
+	showOpenvidu = false;
+	sessionClosed = false;
+
 	constructor(public snackBarService: MdSnackBar) {
 		// Generate fake participant info
 		this.generateParticipantInfo();
 	}
-	
+
 	private generateParticipantInfo() {
-		this.sessionId = "SessionA";
-		this.participantId = "Participant" + Math.floor(Math.random() * 100);
-		this.wsUrl = "wss://127.0.0.1:8443/";
+		this.sessionId = 'SessionA';
+		this.participantId = 'Participant' + Math.floor(Math.random() * 100);
+		this.wsUrl = 'wss://127.0.0.1:8443/';
 	}
-	
+
 	sendForm() {
 		// Setup AngularIpenVidu
 		this.showOpenvidu = true;
 		this.sessionClosed = false;
 	}
-	
+
 	goBack() {
 		this.showOpenvidu = false;
 		this.sessionClosed = false;
@@ -71,34 +79,41 @@ export class AppComponent {
 			});
 		}
 	}
-	
+
 	onParticipantLeft(participantEvent: any) {
-		if (participantEvent.participantId != null) {
+		if (participantEvent.participantId !== null) {
 			this.snackBarService.open('Participant id: ' + participantEvent.participantId + ' has left', null, {
 				duration: 2000
 			});
 		}
 	}
-	
+
 	onErrorMedia() {
 		this.snackBarService.open('There was a media error', null, {
 			duration: 2000
 		});
 	}
-	
+
 	onLeaveRoom() {
 		this.sessionClosed = true;
 		this.snackBarService.open('Left room', null, {
 			duration: 2000
 		});
 	}
-	
+
 	onNewMessage(messageEvent: any) {
-		if (messageEvent.message != null) {
+		console.log(messageEvent);
+		if (messageEvent.message !== null && messageEvent.participant.getId() !== this.participantId) {
 			this.snackBarService.open('Message received: ' + messageEvent.message, null, {
 				duration: 2000
-			});	
+			});
 		}
+	}
+
+	onCustomNotification(onb: any) {
+		this.snackBarService.open('Custom notification received', null, {
+			duration: 2000
+		});
 	}
 
 }

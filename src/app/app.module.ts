@@ -3,32 +3,53 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-// Animations
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MaterialModule } from '@angular/material';
+// Angular Material
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import {
+	MdButtonModule,
+	MdCardModule,
+	MdIconModule,
+	MdInputModule,
+	MdSelectModule,
+	MdSnackBarModule,
+	MdToolbarModule
+} from '@angular/material';
+
+// OpenVidu dependencies
+import { OpenViduModule, OpenViduHangoutsIntl } from 'angular-openvidu';
+import { MySpanishOpenViduHangoutsIntl } from './my-spanish-openvidu-hangouts-intl';
+import 'hammerjs';
 
 // My component
 import { AppComponent } from './app.component';
 
-// OpenVidu dependencies
-import { OpenViduModule } from 'angular-openvidu';
-import 'hammerjs';
-
 @NgModule({
+	declarations: [
+		AppComponent
+	],
 	imports: [
 		BrowserModule,
 		FormsModule,
 		HttpModule,
-		BrowserAnimationsModule,
-		MaterialModule,
-		OpenViduModule
+
+		/* OpenVidu Module */
+		OpenViduModule,
+
+		/* Materila Module */
+		NoopAnimationsModule,
+		MdButtonModule,
+		MdCardModule,
+		MdIconModule,
+		MdInputModule,
+		MdSelectModule,
+		MdSnackBarModule,
+		MdToolbarModule
 	],
-	declarations: [
-		AppComponent
+	providers: [
+		// {provide: OpenViduHangoutsIntl, useClass: OpenViduHangoutsIntl},
 	],
-	bootstrap: [ AppComponent ],
-	providers: []
+	bootstrap: [ AppComponent ]
 })
 export class AppModule {
-	
+
 }

@@ -1,6 +1,8 @@
 # Angular Openvidu Demo
-[![Dependency Status](https://david-dm.org/alxhotel/angular-openvidu-demo.svg)](https://david-dm.org/alxhotel/angular-openvidu-demo)
-[![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://raw.githubusercontent.com/alxhotel/angular-openvidu-demo/master/LICENSE)
+[![Travis][travis-image]][travis-url]
+[![Dependency Status][dependency-status-image]][dependency-status-url]
+[![Angular style guide][codelyzer-image]][codelyzer-url]
+[![GitHub license][license-image]][license-url]
 
 This is a demo app that implements [angular-openvidu][angular-openvidu], using ALL the features included in the component.
 
@@ -20,7 +22,13 @@ This is a demo app that implements [angular-openvidu][angular-openvidu], using A
 	$ sudo docker run -p 8443:8443 --rm -e KMS_STUN_IP=193.147.51.12 -e KMS_STUN_PORT=3478 openvidu/openvidu-server-kms
 	```
 
-3. Start the server from the root folder of the app:
+3. Install dependencies:
+
+	```bash
+	$ npm install
+	```
+
+4. Start the server from the root folder of the app:
 
 	```bash
 	$ ng serve
@@ -34,9 +42,27 @@ Open your browser at: [http://localhost:4200](http://localhost:4200).
 
 The app will automatically reload if you change any of the source files.
 
-### Troubleshooting
+## Running unit tests
 
-#### Why does it keep saying "Connecting..."?
+To execute the unit tests via [Karma](https://karma-runner.github.io), run:
+
+```sh
+$ ng test
+```
+
+## Running end-to-end tests
+
+To execute the end-to-end tests via [Protractor](http://www.protractortest.org/), run:
+
+```sh
+$ ng e2e
+```
+
+Before running the tests make sure you are serving the app via `ng serve`.
+
+## Troubleshooting
+
+### Why does it keep saying "Connecting..."?
 
 You may be having some trouble connecting to the OpenVidu Server's websocket.
 
@@ -51,7 +77,7 @@ https://[IP]:[PORT]/room
 
 And make sure to accept its certificate. Then go back to the app and refresh the page.
 
-#### Why does it keep saying "Joining room..." or "Loading camera..."?
+### Why does it keep saying "Joining room..." or "Loading camera..."?
 
 If you are accessing the app through a host different from `localhost` then you need to enable `HTTPS`.
 
@@ -83,3 +109,12 @@ Since you are not using `localhost`, you need `host=0.0.0.0` to listen for all I
 Apache Software License 2.0 ©
 
 [angular-openvidu]: https://github.com/alxhotel/angular-openvidu
+
+[travis-image]: https://img.shields.io/travis/alxhotel/angular-openvidu-demo/master.svg
+[travis-url]: https://travis-ci.org/alxhotel/angular-openvidu-demo
+[dependency-status-image]: https://david-dm.org/alxhotel/angular-openvidu-demo.svg
+[dependency-status-url]: https://david-dm.org/alxhotel/angular-openvidu-demo
+[codelyzer-image]: https://img.shields.io/badge/code_style-codelyzer-brightgreen.svg
+[codelyzer-url]: https://github.com/mgechev/codelyzer
+[license-image]: https://img.shields.io/badge/License-Apache%202.0-blue.svg
+[license-url]: https://raw.githubusercontent.com/alxhotel/angular-openvidu-demo/master/LICENSE

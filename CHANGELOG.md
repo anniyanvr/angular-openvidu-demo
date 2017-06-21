@@ -4,9 +4,11 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
-### TODO
-- Fix "go back" button
+### Added
 - Basic component creation tests
+
+### Fix
+- Fix "go back" button
 
 ## 0.5.0
 ### Added
