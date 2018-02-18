@@ -12,7 +12,7 @@ app-root {
     flex-direction: column;
     height: 100%;
 	
-	& > md-toolbar {
+	& > mat-toolbar {
 		min-height: 120px !important;
 	}
 	.app-content {
@@ -22,7 +22,7 @@ app-root {
 		h1 {
 			font-weight: 400;
 		}
-		md-card {
+		mat-card {
 			margin: 20px;
 			position: relative;
 			top: -60px;
@@ -31,7 +31,7 @@ app-root {
 			.go-back {
 				margin-bottom: 20px;
 			}
-			form md-input-container {
+			form mat-input-container {
 				width: 250px;
 			}
 		}

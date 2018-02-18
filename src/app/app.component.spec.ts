@@ -24,6 +24,6 @@ describe('AppComponent', () => {
 		const compiled = fixture.debugElement.nativeElement;
 		console.log(app);
 		console.log(compiled);
-		expect(compiled.querySelector('md-toolbar').textContent.trim()).toEqual('Angular OpenVidu Demo');
+		expect(compiled.querySelector('mat-toolbar').textContent.trim()).toEqual('Angular OpenVidu Demo');
 	}));
 });

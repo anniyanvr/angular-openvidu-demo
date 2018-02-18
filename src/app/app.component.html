@@ -1,26 +1,26 @@
-<md-toolbar color="primary">
+<mat-toolbar color="primary">
 	<span>Angular OpenVidu Demo</span>
-</md-toolbar>
+</mat-toolbar>
 
 <div class="app-content">
-	  <md-card>
-		<md-card-content>
+	  <mat-card>
+		<mat-card-content>
 			<!-- Form to login into the room -->
 			<div class="form-session" *ngIf="!showOpenvidu">
 				<h1>Join a group call</h1>
 				<form (submit)="sendForm()" accept-charset="UTF-8">
 					<p>
-						<md-input-container>
-							<input mdInput required type="text" placeholder="Participant ID" [(ngModel)]="participantId" name="participantId">
-						</md-input-container>
+						<mat-input-container>
+							<input matInput required type="text" placeholder="Participant ID" [(ngModel)]="participantId" name="participantId">
+						</mat-input-container>
 					</p>
 					<p>
-						<md-input-container>
-							<input mdInput required type="text" placeholder="Session ID" [(ngModel)]="sessionId" name="sessionId">
-						</md-input-container>
+						<mat-input-container>
+							<input matInput required type="text" placeholder="Session ID" [(ngModel)]="sessionId" name="sessionId">
+						</mat-input-container>
 					</p>
 					<p>
-						<button md-raised-button type="submit" color="primary">
+						<button mat-raised-button type="submit" color="primary">
 							Join!
 						</button>
 					</p>
@@ -29,8 +29,8 @@
 			
 			<!-- Options to go back -->
 			<div class="go-back" *ngIf="sessionClosed">
-				<button md-raised-button type="submit" color="primary" (click)="goBack()">
-					<md-icon>arrow_back</md-icon>
+				<button mat-raised-button type="submit" color="primary" (click)="goBack()">
+					<mat-icon>arrow_back</mat-icon>
 					Go back
 				</button>
 			</div>
@@ -47,6 +47,6 @@
 				(onCustomNotification)="onCustomNotification($event)">
 				Loading openvidu...
 			</openvidu-hangouts>
-		</md-card-content>
-	</md-card>
+		</mat-card-content>
+	</mat-card>
 </div>

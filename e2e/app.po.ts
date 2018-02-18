@@ -1,6 +1,6 @@
 import { browser, by, element } from 'protractor';
 
-export class AngularOpenviduDemoNewPage {
+export class AngularOpenviduDemoPage {
 	navigateTo() {
 		return browser.get('/');
 	}

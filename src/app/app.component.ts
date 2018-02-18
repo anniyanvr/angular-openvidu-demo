@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { MdSnackBar } from '@angular/material';
+import { MatSnackBar } from '@angular/material';
 
 @Component({
 	selector: 'app-root',
@@ -25,7 +25,7 @@ export class AppComponent {
 	showOpenvidu = false;
 	sessionClosed = false;
 
-	constructor(public snackBarService: MdSnackBar) {
+	constructor(public snackBarService: MatSnackBar) {
 		// Generate fake participant info
 		this.generateParticipantInfo();
 	}
