@@ -18,9 +18,7 @@ before_install:
 - export DISPLAY=:99.0
 - sh -e /etc/init.d/xvfb start
 
-install: true
-
-before_script:
+install:
 - npm install
 
 script:
