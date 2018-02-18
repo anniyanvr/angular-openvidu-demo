@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
 
 // Angular Material
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
@@ -30,7 +29,6 @@ import { AppComponent } from './app.component';
 	imports: [
 		BrowserModule,
 		FormsModule,
-		HttpModule,
 
 		/* OpenVidu Module */
 		OpenViduModule,
@@ -46,7 +44,7 @@ import { AppComponent } from './app.component';
 		MatToolbarModule
 	],
 	providers: [
-		// {provide: OpenViduHangoutsIntl, useClass: OpenViduHangoutsIntl},
+		// {provide: OpenViduHangoutsIntl, useClass: MySpanishOpenViduHangoutsIntl},
 	],
 	bootstrap: [ AppComponent ]
 })
