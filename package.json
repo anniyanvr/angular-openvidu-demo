@@ -31,7 +31,7 @@
     "@angular/material": "5.2.4",
     "@angular/platform-browser": "^5.2.5",
     "@angular/platform-browser-dynamic": "^5.2.5",
-    "@angular/router": "^5.2.5",
+    "@angular/router": "^6.0.2",
     "ajv": "^6.0.0",
     "angular-bigscreen": "^2.0.0",
     "angular-openvidu": "^0.7.0",
