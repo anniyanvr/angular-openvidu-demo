@@ -10,7 +10,7 @@ module.exports = function (config) {
 		
 		// frameworks to use
 		// available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-		frameworks: ['jasmine', '@angular/cli'],
+		frameworks: ['jasmine', '@angular-devkit/build-angular'],
 		
 		// list of files / patterns to load in the browser
 		files: [
@@ -24,7 +24,7 @@ module.exports = function (config) {
 		// preprocess matching files before serving them to the browser
 		// available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
 		preprocessors: {
-			'./src/test.ts': ['@angular/cli']
+			
 		},
 		
 		plugins: [
@@ -32,7 +32,7 @@ module.exports = function (config) {
 			require('karma-chrome-launcher'),
 			require('karma-jasmine-html-reporter'),
 			require('karma-coverage-istanbul-reporter'),
-			require('@angular/cli/plugins/karma')
+			require('@angular-devkit/build-angular/plugins/karma')
 		],
 		
 		client: {
@@ -44,13 +44,11 @@ module.exports = function (config) {
 		},
 		
 		coverageIstanbulReporter: {
-			reports: ['html', 'lcovonly'],
+			dir: require('path').join(__dirname, 'coverage'), reports: ['html', 'lcovonly'],
 			fixWebpackSourcePaths: true
 		},
 		
-		angularCli: {
-			environment: 'dev'
-		},
+		
 		
 		// test results reporter to use
 		// possible values: 'dots', 'progress'
